@@ -1,0 +1,453 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: black;
+    font-family:sans-serif;
+}
+.cont {
+    width: 95%;
+    margin: auto;
+}
+:root {
+    --maincolor: #00e08e;
+    --backcolor: rgb(5 12 26);
+}
+span {
+    color: var(--maincolor);
+}
+/* /////////////////////////////////////////////////////////////////////////////////////// */
+#header {
+    /* background-color: red; */
+     /* position: fixed;  */
+    z-index: 1; 
+    background-color: var(--backcolor);
+}
+#header .cont {
+    display: flex ;
+    color: rgb(0, 0, 0);
+    background-color: var(--backcolor);
+    flex-flow: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+    position: fixed;
+    z-index: 1;
+    padding: 40px 0;
+    width: 100%;
+    
+}
+.cont nav >ul {
+    display: flex;
+    
+}
+#header .cont nav {
+    margin-right: 150px;
+}
+.cont nav >ul li {
+    margin: 30px;
+    list-style-type: none;
+
+}
+.cont nav >ul li a::after {
+    content:"";
+    display: block;
+    height: 3.5px;
+    width: 0%;
+    background-color: #6195ff;
+    margin-top: 2.5px;
+    transition: width 0.5s;
+}
+.cont nav >ul li a:hover::after {
+    width: 100%;
+}
+.cont nav >ul .ul-home::after{
+    width: 100%;
+}
+/* /////////////////////////////////////////////////// [anmation]*/
+@keyframes anmy {
+0%{margin-right: 43px;}
+25%{margin-top: 120px;}
+50% {margin-right: 60px;}
+75%{margin-top: 165px;}
+100% {margin-top: 150px;}
+}
+/* /////////////////////////////////////////////////// */
+.cont nav >ul li a {
+    text-decoration: none;
+    color: white;
+    padding: 15px 0 15px;
+    
+}
+.header-title img {
+    margin-left: 50px;
+    margin-top: 0px;
+}
+/* /////////////////////////////////////////////////new page */
+#home {
+    background-color: var(--backcolor);
+    width: 100%;
+    height: 100vh;
+}
+
+.home-item {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    /* background-color: aqua; */
+    /* margin-top: 100px; */
+}
+.hexagon {
+    
+    width: 400px;
+    height: 350px;
+    background-color: var(--maincolor);
+    clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+    margin: 30px auto;
+    transform: rotate(90deg);
+    margin-top: 150PX;
+    
+    
+    
+}
+
+#home> div{
+color: white;
+
+}
+.home-contant {
+    margin-top: 230px;
+    padding-right: 250px;
+    margin-top: 330px;
+    
+}
+
+.home-contant span {
+    color:var(--maincolor);
+}
+.home-contant>p{
+    font-size: 22px;
+}
+.home-contant h1 {
+    font-size: 50px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    color: var(--maincolor);
+}
+.home-contant h3 {
+    margin-bottom: 30px;
+}
+.home-contant .home-contant-p2 {
+    font-size: 17px;
+    margin-bottom: 40px;
+    color: #e2d8d8;
+    line-height: 1.7;
+}
+.home-contant button{
+    width: 150px;
+    height: 50px;
+    background-color: var(--maincolor);
+    box-shadow: 2px 2px 8px 2px var(--maincolor);
+    color: white;
+    border: 0;
+    border-radius: 16px;
+    font-size: 17px;
+    line-height: 50px;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+.home-contant button:hover {
+    width: 130px;
+    height: 40px;
+}
+   
+
+.myphoto-img img {
+    width: 400px;
+    height: 470px;
+    position: absolute;
+    top: 180px;
+    right: 50px;
+    
+}
+.myphoto {
+    margin:150px 50px 0 0;
+    animation-name: anmy;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+.home-contact {
+    margin-top: 160px;
+}
+.home-contact i {
+color: white;
+margin-left: 15px;
+background-color: rgba(11, 185, 78, 0.37);
+border-radius: 50%;
+height: 45px;
+width: 45px;
+text-align: center;
+line-height: 45px;
+font-size: 22px;
+}
+.home-contact >span {
+    margin-right: 50px;
+}
+/* ///////////////////////////////////////////////////////........new page  */
+
+
+#service{
+    color: white;
+    margin-bottom: 100px;
+}
+#service .cont {
+    width: 87%;
+}
+.service-contant {
+    display: flex;
+    justify-content: space-between;
+}
+.service-item {
+    background-color: var(--backcolor);
+    width:500px;
+    
+    width: 27%;
+    height: 350px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px 0px 21px 5px #fff;
+    justify-content: center;
+    line-height: 1.6;
+    transition: all 0.5s;
+}
+.service-item:hover {
+    width: 505px;
+    height: 360px;
+    background-color: rgba(42, 99, 153, 0.966);
+}
+.service-item h2 {
+    margin: 20px 0;
+    font-size: 28px;
+}
+.service-item p {
+    margin-top: 15px;
+    font-size: 15px;
+    color: #e2d8d8;
+}
+.service-item-h2 {
+    margin: 30px 0;
+    font-size: 30px;
+}
+.service-item-p {
+    margin-top: 50px;
+}
+/* ******************************************************************** */
+#project {
+    width: 100%;
+    height: 80vh;
+    background-color:var(--backcolor) ;
+}
+.project-contant {
+    text-align: center;
+    padding:50px 0 ;
+    width: 800px;
+    margin: auto;
+    color: white;
+}
+.project-contant h2 {
+    margin-bottom: 30px;
+    font-size: 35px;
+}
+.project-img {
+    position: relative;
+    display: flex;
+    /* justify-content: center; */
+    align-items: flex-end;
+    
+}
+.project-img .project-item {
+    border-radius: 20px;
+    height: 260px;
+    width: calc(96%/5);
+    margin: 0 3px;
+    /* position: relative; */
+    
+}
+.project-img img{
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    
+}
+.project-img div:nth-child(3){
+    height: 330px;
+    width: 21%;
+}
+.overlay2 {
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    border-radius: 20px;
+    
+}
+.project-img .project-item  {
+    position: relative;
+    
+}
+.project-btn {
+    margin: auto;
+    margin-top: 50px;
+    display: flex;
+    width: 220px;
+    
+   
+}
+.project-btn .btn-item1, .project-btn .btn-item2 {
+    width: 150px;
+    height: 50px;
+    border: 0;
+    background-color: var(--maincolor);
+    box-shadow: 2px 2px 8px 2px var(--maincolor);
+    margin-top: 25px;
+    font-size: 16px;
+    color: white;
+
+}
+.project-btn .btn-item1 {
+    border-radius: 10px 50% 50% 10px;
+    margin-left: 20px;
+
+}
+.project-btn .btn-item2 {
+    border-radius: 50% 10px 10px 50%;
+    margin-right: 10px;
+}
+/* ***************************************************************** */
+#says {
+    color: white;
+    margin: 30px 0 100px 0;
+}
+.says-contant1 {
+    margin: 80px;
+}
+.says-contant1 h2 {
+    margin: 20px 0;
+    font-size: 35px;
+}
+.says-contant2 {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    align-content: center;
+}
+
+.says-contant2 .says-item {
+    width: 27%;
+    background-color: var(--backcolor) ;
+    box-shadow: 0px 0px 21px 5px #fff;
+    transition: all 0.5s;
+}
+.says-contant2 .says-item:hover{
+    width: 505px;
+    /* height: 420px; */
+    background-color: rgba(42, 99, 153, 0.966);
+}
+.says-contant2 .says-item span i {
+    padding-top: 40px;
+}
+.says-contant2 .says-item p {
+    
+    margin: 30px 0;
+    line-height: 1.6;
+}
+.says-contant2 .says-item p:nth-child(2){
+    line-height: 1.9;
+    text-align: left;
+    padding-left: 15px;
+    word-spacing: 3px;
+    margin-top: 40px;
+}
+.says-contant2 .says-item h2 {
+    font-size: 30px;
+    
+}
+.says-li {
+    display: flex;
+    
+}
+.says-contant3 {
+    width: 120px;
+    margin: auto;
+    margin-top: 80px;
+    
+}
+.says-li li {
+    height: 8px;
+    width: 8px;
+    
+    border-radius: 50%;
+    background-color: white;
+    list-style: none;
+    margin: 5px ;
+
+}
+/* /////////////////////////////////////.....new [contact] */
+#contact {
+    color: white;
+    background-color: var(--backcolor) ;
+}
+.contact-contant {
+    display: flex;
+    margin-top: 50px;
+    justify-content: space-between;
+    /* margin-right: 30px; */
+
+}
+.contact-item1 i {
+    color: white;
+/* margin-left: 15px; */
+background-color: rgba(11, 185, 78, 0.37);
+border-radius: 50%;
+height: 45px;
+width: 45px;
+text-align: center;
+line-height: 45px;
+font-size: 22px;
+margin: 0px 5px 10px 5px;
+
+}
+.contact-item {
+    width: 20%;
+   line-height: 1.9;
+   text-align: justify;
+   text-transform: capitalize;
+   /* text-align: center; */
+   
+}
+.contact-item3 a  {
+    list-style: none;
+    text-decoration: none;
+    color: var(--maincolor);
+}
+.footer-contant {
+    text-align: center;
+    color: #b9b1b1;
+    font-size: 15px;
+    padding-top: 50px;
+    margin-bottom: 50px;
+    background-color: black;
+    
+}
+#contact .cont > h2 {
+    
+    font-size: 35px;
+    padding-top: 20px;
+}
+
